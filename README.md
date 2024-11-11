@@ -1,4 +1,4 @@
-![img](https://d-araujof.github.io/Portifolio/img/projetos/portifolio.png)
+![img](https://github.com/d-araujof/Notas_Fiap/blob/fc32fa2fe29a3c100eafa201b830d695923086e7/Notas_fiap.png)
 
 ---
 
