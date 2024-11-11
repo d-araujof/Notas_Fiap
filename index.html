@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Fiap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Calculadora de notas FIAP</h1>
+
+        <div class="container-semestral">
+            <h2 class="espaco">Média semestral e CP</h2>
+            <label>Cp01:</label>
+            <input class="espaco caixa" type="number" id="Cp01" step="0.1" placeholder="Cp01"><br>
+    
+            <label>Cp02:</label>
+            <input class="espaco caixa" type="number" id="Cp02" step="0.1" placeholder="Nota Cp02"><br>
+
+            <label>Sprint01:</label>
+            <input class="espaco caixa" type="number" id="Sprint01" step="0.1" placeholder="Nota Sprint01"><br>
+    
+            <label>Sprint02:</label>
+            <input class="espaco caixa" type="number" id="Sprint02" step="0.1" placeholder="Nota Sprint02"><br>
+    
+            <label>GS:</label>
+            <input class="espaco caixa" type="number" id="Gs" step="0.1" placeholder="Nota GS"><br>
+    
+            <label>
+                <input class="check" type="checkbox" id="calcMediaSemestral"> Incluir Média Semestral
+            </label><br>
+    
+            <button class="espaco top" onclick="calcularMedia()">Calcular</button>
+    
+            <div class="result" id="result"></div>
+        </div>
+
+        <div class="container-anual">
+            <h2 class="espaco">Média Anual</h2>
+            <label>Média do 1º Semestre:</label>
+            <input class="espaco caixa" type="number" id="media1Semestre" step="0.1" placeholder="Média do 1º Semestre"><br>
+    
+            <label>Média do 2º Semestre:</label>
+            <input class="espaco caixa" type="number" id="media2Semestre" step="0.1" placeholder="Média do 2º Semestre"><br>
+    
+            <button class="espaco" onclick="calcularMediaAnual()">Calcular</button>
+    
+            <div class="result" id="resultAnual"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
