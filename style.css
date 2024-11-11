@@ -22,8 +22,7 @@ body {
 }
 
 .container {
-    max-width: 500px;
-    width: 100%;
+    margin: 1rem;
     padding: 24px;
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--Corpo);
@@ -83,7 +82,6 @@ button:hover {
     border-color: var(--Destaque);
     transition: background-color 0.3s;
 }
-
 
 .caixa {
     background-color: var(--Fundo);
