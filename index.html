@@ -1,63 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Notas FIAP</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas Fiap</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <div id="container" class="container">
+      <h1>Calculadora Fiap</h1>
+      <p class="subtitulo">Menos ansiedade, mais clareza nas suas notas!</p>
 
-<body>
-    <div class="container">
+      <div class="tabs">
+        <button
+          class="tab active"
+          data-target="semestral"
+          onclick="openTab('semestral')"
+        >
+          Média Semestral e CP
+        </button>
+        <button class="tab" data-target="anual" onclick="openTab('anual')">
+          Média Anual
+        </button>
 
-        <h1>Calculadora de notas FIAP</h1>
+        <button
+          class="tab"
+          data-target="frequencia"
+          onclick="openTab('frequencia')"
+        >
+          Frequência de Presença
+        </button>
+      </div>
 
-        <div class="container-semestral">
-            <h2 class="espaco">Média semestral e CP</h2>
-            <label>Cp01:</label>
-            <input class="espaco caixa" type="number" id="Cp01" step="0.1" placeholder="Cp01"><br>
+      <!-- Média Semestral -->
+      <div id="semestral" class="tab-content active">
+        <h2>Média Semestral e CP</h2>
 
-            <label>Cp02:</label>
-            <input class="espaco caixa" type="number" id="Cp02" step="0.1" placeholder="Nota Cp02"><br>
+        <input type="number" placeholder="Nota CP 01" id="Cp01" />
+        <input type="number" placeholder="Nota CP 02" id="Cp02" />
+        <input type="number" placeholder="Nota CP 03" id="Cp03" />
+        <input type="number" placeholder="Nota Sprint 01" id="Sprint01" />
+        <input type="number" placeholder="Nota Sprint 02" id="Sprint02" />
+        <input type="number" placeholder="Nota GS" id="Gs" />
 
-            <label>Sprint01:</label>
-            <input class="espaco caixa" type="number" id="Sprint01" step="0.1" placeholder="Nota Sprint01"><br>
-
-            <label>Sprint02:</label>
-            <input class="espaco caixa" type="number" id="Sprint02" step="0.1" placeholder="Nota Sprint02"><br>
-
-            <label>GS:</label>
-            <input class="espaco caixa" type="number" id="Gs" step="0.1" placeholder="Nota GS"><br>
-
-            <label>
-                <input class="check" type="checkbox" id="calcMediaSemestral"> Incluir Média Semestral
-            </label><br>
-
-            <button class="espaco top" onclick="calcularMedia()">Calcular</button>
-
-            <div class="result" id="result"></div>
+        <div class="bottom">
+          <label>
+            <input class="check" type="checkbox" id="calcMediaSemestral" />
+            Incluir Média Semestral
+          </label>
         </div>
 
-        <div class="container-anual">
-            <h2 class="espaco">Média Anual</h2>
-            <label>Média do 1º:</label>
-            <input class="espaco caixa" type="number" id="media1Semestre" step="0.1"
-                placeholder="Média do 1º Semestre"><br>
+        <button onclick="calcularMedia()">Calcular</button>
+        <div class="result" id="result"></div>
+      </div>
 
-            <label>Média do 2º:</label>
-            <input class="espaco caixa" type="number" id="media2Semestre" step="0.1"
-                placeholder="Média do 2º Semestre"><br>
+      <!-- Média Anual -->
+      <div id="anual" class="tab-content">
+        <h2>Média Anual</h2>
 
-            <button class="espaco" onclick="calcularMediaAnual()">Calcular</button>
+        <input
+          type="number"
+          placeholder="Média do 1º Semestre"
+          id="media1Semestre"
+        />
+        <input
+          type="number"
+          placeholder="Média do 2º Semestre"
+          id="media2Semestre"
+        />
 
-            <div class="result" id="resultAnual"></div>
-        </div>
+        <button onclick="calcularMediaAnual()">Calcular</button>
+        <div class="result" id="resultAnual"></div>
+      </div>
+
+      <!-- Frequência -->
+      <div id="frequencia" class="tab-content">
+        <h2>Frequência de Presença</h2>
+
+        <input
+          type="number"
+          placeholder="Quantidade de Aulas Anual"
+          id="quantAulas"
+        />
+        <input type="number" placeholder="Faltas" id="numeroFaltas" />
+
+        <button onclick="calcularFaltas()">Calcular</button>
+        <div class="result" id="resultFaltas"></div>
+      </div>
+
+      <div id="limpar" class="limpar">
+        <button onclick="limpar()">Limpar</button>
+      </div>
     </div>
 
-    <script src="./script.js"></script>
-
-</body>
-
+    <script src="/js/script.js"></script>
+    <script src="/js/abas.js"></script>
+    <script src="/js/limpar.js"></script>
+  </body>
 </html>
