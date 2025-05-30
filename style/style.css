@@ -18,8 +18,6 @@
 }
 
 body {
-  padding-top: 50px;
-  padding-bottom: 50px;
   background-color: var(--fundo);
   color: var(--branco);
   font-family: "Roboto Mono", monospace;
@@ -30,6 +28,8 @@ body {
 }
 
 .container {
+  margin-bottom: 50px;
+  margin-bottom: 50px;
   background-color: var(--fundo);
   padding: 30px;
   border-radius: 20px;
