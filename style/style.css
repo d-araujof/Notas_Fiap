@@ -24,18 +24,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .container {
-  margin-bottom: 50px;
-  margin-bottom: 50px;
   background-color: var(--fundo);
   padding: 30px;
   border-radius: 20px;
-  max-width: 500px;
+  max-width: 800px;
   width: 100%;
-  box-shadow: 0 0 20px var(--branco);
+  height: 100%;
+}
+
+.bottom{
+  margin-bottom: 15rem;
 }
 
 h1 {
